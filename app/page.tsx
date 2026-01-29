@@ -855,7 +855,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 px-6 py-8 text-center text-gray-400">
-        <p>&copy; 2024 Titus Quayson. Cloud & Site Reliability Engineer.</p>
+        <p>&copy; 2026 Titus Quayson. Cloud & Site Reliability Engineer.</p>
       </footer>
     </main>
   )
