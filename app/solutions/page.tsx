@@ -326,7 +326,7 @@ export default function Solutions() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 px-4 sm:px-6 py-6 sm:py-8 text-center text-gray-400 text-xs sm:text-sm">
-        <p>&copy; 2024 Titus Quayson. Cloud & Site Reliability Engineer.</p>
+        <p>&copy; 2026 Titus Quayson. Cloud & Site Reliability Engineer.</p>
       </footer>
     </main>
   )
