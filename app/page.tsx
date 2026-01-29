@@ -67,7 +67,7 @@ export default function Home() {
           <div className="flex justify-center mb-4 sm:mb-6">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40">
               <img 
-                src="/profile.jpg" 
+                src="/TitusQuayson/profile.jpg" 
                 alt="Titus Quayson"
                 className="w-full h-full object-cover rounded-full border-3 sm:border-4 border-cloud-blue shadow-lg"
                 onError={(e) => {
@@ -484,7 +484,7 @@ export default function Home() {
                     <h6 className="text-xs sm:text-sm font-semibold text-gray-400 mb-3 sm:mb-4">Cloud Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 sm:h-56 md:h-64 lg:h-48 rounded flex items-center justify-center overflow-hidden">
                       <img 
-                        src="/ecobank-gitops-architecture.png" 
+                        src="/TitusQuayson/ecobank-gitops-architecture.png" 
                         alt="AWS GitOps Architecture for Fintech Mobile Application"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
@@ -563,7 +563,7 @@ export default function Home() {
                     <h6 className="text-sm font-semibold text-gray-400 mb-4">Cloud Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 rounded flex items-center justify-center">
                       <img 
-                        src="/aws-eks-platform-architecture.png" 
+                        src="/TitusQuayson/aws-eks-platform-architecture.png" 
                         alt="AWS EKS Platform Production Cloud Infrastructure"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
@@ -644,7 +644,7 @@ export default function Home() {
                     <h6 className="text-sm font-semibold text-gray-400 mb-4">Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 rounded flex items-center justify-center">
                       <img 
-                        src="/Create_a_cloud_202601271327.jpeg" 
+                        src="/TitusQuayson/Create_a_cloud_202601271327.jpeg" 
                         alt="Database Migration Architecture - On-Prem to AWS RDS"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
