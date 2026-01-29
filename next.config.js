@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/TitusQuayson',
+  assetPrefix: '/TitusQuayson',
   trailingSlash: true,
   images: {
     unoptimized: true
