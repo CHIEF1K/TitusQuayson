@@ -4,6 +4,12 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ExternalLink, Download, Mail, Cloud, Server, Shield, GitBranch, Activity, Globe } from 'lucide-react'
 
+// Helper to get the correct base path for images
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/TitusQuayson' : ''
+  return `${basePath}${path}`
+}
+
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState('all')
 
@@ -65,11 +71,12 @@ export default function Home() {
         <div className="text-center space-y-6 sm:space-y-8">
           {/* Profile Picture */}
           <div className="flex justify-center mb-4 sm:mb-6">
-            <div className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40">
+            <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48">
               <img 
-                src="/TitusQuayson/profile.png" 
+                src={getImagePath('/profile.png')} 
                 alt="Titus Quayson"
                 className="w-full h-full object-cover rounded-full border-3 sm:border-4 border-cloud-blue shadow-lg"
+                style={{ objectPosition: 'center top' }}
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -106,11 +113,6 @@ export default function Home() {
               <ExternalLink size={16} className="sm:hidden" />
               <ExternalLink size={20} className="hidden sm:block" />
             </Link>
-            <a href="/resume.pdf" className="border-2 border-gray-600 hover:border-gray-400 active:border-gray-300 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 text-sm sm:text-base touch-manipulation">
-              Download Resume
-              <Download size={16} className="sm:hidden" />
-              <Download size={20} className="hidden sm:block" />
-            </a>
             <a href="mailto:quaysontitus@gmail.com" className="text-gray-400 hover:text-white active:text-gray-200 transition-colors flex items-center justify-center gap-2 py-2 text-sm sm:text-base touch-manipulation">
               Contact Me
               <Mail size={16} className="sm:hidden" />
@@ -148,16 +150,20 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center">About</h2>
           <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-300 leading-relaxed">
             <p>
-              Cloud & Site Reliability Engineer with 4+ years of experience designing scalable cloud platforms 
-              and ensuring production system reliability for fintech and payment systems.
+              Cloud, DevOps & Site Reliability Engineer with 4+ years of experience designing scalable cloud platforms, 
+              automating infrastructure delivery, and ensuring production system reliability for fintech and payment systems.
             </p>
             <p>
-              I combine cloud architecture expertise with SRE practices to build resilient AWS infrastructure, 
-              implement comprehensive monitoring, and maintain 99.9%+ uptime across distributed environments. 
-              Experienced in Kubernetes platforms, Infrastructure as Code, and incident response.
+              I combine cloud architecture expertise with DevOps automation and SRE practices to build resilient AWS infrastructure, 
+              implement CI/CD pipelines, automate deployments with GitOps, and maintain 99.9%+ uptime across distributed environments. 
+              Experienced in Kubernetes platforms, Infrastructure as Code with Terraform, and incident response.
             </p>
             <p>
-              I document cloud reliability patterns and SRE practices through technical articles, 
+              My DevOps approach focuses on eliminating manual processes through automation, enabling teams to deploy faster 
+              and more reliably while maintaining security and compliance standards.
+            </p>
+            <p>
+              I document cloud reliability patterns, DevOps workflows, and SRE practices through technical articles, 
               sharing real-world insights from operating large-scale payment platforms.
             </p>
           </div>
@@ -484,7 +490,7 @@ export default function Home() {
                     <h6 className="text-xs sm:text-sm font-semibold text-gray-400 mb-3 sm:mb-4">Cloud Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 sm:h-56 md:h-64 lg:h-48 rounded flex items-center justify-center overflow-hidden">
                       <img 
-                        src="/TitusQuayson/ecobank-gitops-architecture.png" 
+                        src={getImagePath('/ecobank-gitops-architecture.png')} 
                         alt="AWS GitOps Architecture for Fintech Mobile Application"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
@@ -563,7 +569,7 @@ export default function Home() {
                     <h6 className="text-sm font-semibold text-gray-400 mb-4">Cloud Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 rounded flex items-center justify-center">
                       <img 
-                        src="/TitusQuayson/aws-eks-platform-architecture.png" 
+                        src={getImagePath('/aws-eks-platform-architecture.png')} 
                         alt="AWS EKS Platform Production Cloud Infrastructure"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
@@ -644,7 +650,7 @@ export default function Home() {
                     <h6 className="text-sm font-semibold text-gray-400 mb-4">Architecture Overview</h6>
                     <div className="bg-gray-800 h-48 rounded flex items-center justify-center">
                       <img 
-                        src="/TitusQuayson/Create_a_cloud_202601271327.jpeg" 
+                        src={getImagePath('/Create_a_cloud_202601271327.jpeg')} 
                         alt="Database Migration Architecture - On-Prem to AWS RDS"
                         className="w-full h-full object-contain rounded"
                         onError={(e) => {
